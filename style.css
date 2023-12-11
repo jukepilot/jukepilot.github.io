@@ -1,0 +1,53 @@
+@import url('https://fonts.cdnfonts.com/css/gotham');
+
+:root {
+  --background-color: #1C1523;
+  --background-color-dark: #170F1F;
+  --background-color-darker: #120A18;
+  --background-color-light: #2A1F3A;
+
+  --blur-color: #1c1523b2;
+
+  --text-color: #effaff;
+  --link-color: #B3A9F1;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.header {
+    background-color: var(--background-color-dark);
+    height: 175px;
+    width: 35%;
+    margin-left: 32.5%;
+}
+
+.card, .content {
+    display: flex;
+    border-radius: 15px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    float: left;
+    top: 20%;
+}
+
+b, h1, h2, h3, h4, h5, h6, span, p { 
+    font-family: Gotham Black,sans-serif;
+    color: var(--text-color);
+}
+
+.name {
+    float: left;
+    text-align: center;
+}
+
+.info {
+    /* background-color: var(--background-color-light); */
+    width: 85%;
+}
