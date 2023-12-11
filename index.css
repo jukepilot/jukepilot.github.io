@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/gotham');
 
 /* Purple Dark Theme */
-:root {
+background {
   --background-color: #1C1523;
   --background-color-dark: #170F1F;
   --background-color-darker: #120A18;
