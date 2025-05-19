@@ -1,0 +1,283 @@
+@font-face {
+    font-family: 'Monserrat-Bold';
+    src: url('assets/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Monserrat';
+    src: url('assets/Montserrat.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Monserrat-Bold', sans-serif;
+    font-size: 1.25rem;
+    color: #ffffff;
+    background-color: #191210;
+    background-image: url('assets/Background2.png');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    cursor: url("assets/Normal-Select.png"), auto;
+    margin-bottom: 5%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.red {
+    color: #F65C5F;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.center-align {
+    max-width: 960px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.top {
+    text-align: left;
+    padding: 20px 0;
+}
+
+.pfp {
+    width: 256px;
+    height: auto;
+    display: block;
+    float: right;
+    margin-left: 20px;
+}
+
+.intro-paragraph {
+    font-family: 'Monserrat', sans-serif;
+}
+
+.main-content {
+    margin-top: 5%;
+    width: 100%;
+}
+
+.games {
+    padding-bottom: 50px;
+}
+
+.game-link, .plugin-link {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #191210;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.plugin-link {
+    width: 100%;
+    max-width: 286px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #191210;
+}
+
+.social-icon, .game-icon, .plugin-icon {
+    border-radius: 5px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.social-icon {
+    width: 43px;
+    margin: 0 7.5px;
+}
+
+.game-icon {
+    width: 136px;
+    height: 136px;
+    display: block;
+}
+
+.plugin-icon {
+    width: 256px;
+    height: 256px;
+    display: block;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.game-icon:hover, .plugin-icon:hover {
+    transform: scale(1.025);
+}
+
+.header {
+    align-items: center;
+    text-align: center;
+}
+
+.game-title {
+    text-align: left;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: color 0.2s ease;
+}
+
+.title:hover {
+    color: #F65C5F;
+    text-decoration: underline;
+    transform: scale(1.025);
+}
+
+.description {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+    justify-content: left;
+}
+
+.tag {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    font-family: 'Monserrat', sans-serif;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.tag:hover {
+    transform: scale(1.025);
+}
+
+.ccu-tag, .install-tag {
+    background-color: #F65C5F;
+}
+
+.visits-tag, .favorites-tag {
+    background-color: #68b651;
+}
+
+.timeline-tag {
+    background-color: #9ca3af;
+}
+
+#plugins-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Typewriter */
+#typing-container {
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 100%;
+}
+
+#typing {
+    display: inline-block;
+    white-space: nowrap;
+    color: #F65C5F;
+}
+
+.typed-cursor {
+    opacity: 0;
+}
+
+.typed-cursor.typed-cursor--blink {
+    animation: typedjsBlink 1s infinite;
+}
+
+@keyframes typedjsBlink {
+    50% { opacity: 1.0; }
+}
+
+#autocomplete-popup {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ffffff80;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+    #plugins-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #plugins-container {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    .top {
+        text-align: center;
+    }
+
+    .pfp {
+        float: none;
+        margin: 0 auto 15px auto;
+        width: 100px;
+    }
+
+    .game-link {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .plugin-link {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #191210;
+    }
+
+    .title {
+        font-size: 1.1rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+
+    .tag {
+        font-size: 0.85rem;
+    }
+}
