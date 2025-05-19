@@ -1,4 +1,4 @@
-const words = ["Programmer.", "UI Designer.", "Brainrotted Individual."];
+const words = ["Programmer.", "Builder.", "UI Designer.", "Brainrotted Individual."];
 const typingEl = document.getElementById("typing");
 const popupEl = document.getElementById("autocomplete-popup");
 
